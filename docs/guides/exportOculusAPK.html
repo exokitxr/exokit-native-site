@@ -458,16 +458,16 @@
 
 
       <p>This guide explains how to package your XR site with the Exokit Engine as an APK for Oculus Mobile (Oculus Go, Oculus Quest) devices.</p>
-<h2 id="set-default-site"><a href="#set-default-site" class="headerlink" title="Set default site"></a>Set default site</h2><p>In the Exokit <a href="https://github.com/exokitxr/exokit/blob/f10dadf0013de0a35a5e72046140a0345987ab80/main.cpp#L416" target="_blank" rel="external"><code>main.cpp</code></a> is where you will find the default site that the Exokit APK will load into. Change the <code>jsString</code> to your site URL or file path.</p>
-<h1 id="option-1-docker"><a href="#option-1-docker" class="headerlink" title="OPTION 1- Docker"></a>OPTION 1- Docker</h1><p>The upside of docker is that it requires minimal environment setup. The downside is that is will do <em>every</em> instruction <em>everytime</em> it is ran.</p>
+<h3 id="set-default-site"><a href="#set-default-site" class="headerlink" title="Set default site"></a>Set default site</h3><p>In the Exokit <a href="https://github.com/exokitxr/exokit/blob/f10dadf0013de0a35a5e72046140a0345987ab80/main.cpp#L416" target="_blank" rel="external"><code>main.cpp</code></a> is where you will find the default site that the Exokit APK will load into. Change the <code>jsString</code> to your site URL or file path.</p>
+<h2 id="option-1-docker"><a href="#option-1-docker" class="headerlink" title="OPTION 1- Docker"></a>OPTION 1- Docker</h2><p>The upside of docker is that it requires minimal environment setup. The downside is that is will do <em>every</em> instruction <em>everytime</em> it is ran.</p>
 <p>Building an APK with the Dockerfile is as simple as:</p>
 <ul>
 <li><code>docker pull debian:latest</code></li>
 <li><code>docker build -f android.Dockerfile -t exokit .</code></li>
 <li><code>docker run exokit cat exokit.apk &gt;exokit.apk</code></li>
 </ul>
-<h1 id="option-2-manual-environment-setup"><a href="#option-2-manual-environment-setup" class="headerlink" title="OPTION 2- Manual environment setup"></a>OPTION 2- Manual environment setup</h1><h2 id="prerequisites"><a href="#prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><p>Node <code>11.6.0</code></p>
-<h2 id="install-android-sdkmanager"><a href="#install-android-sdkmanager" class="headerlink" title="Install Android sdkmanager"></a>Install Android sdkmanager</h2><p>Instructions for getting the android sdk manager, adb, ndk-bundle, etc:</p>
+<h2 id="option-2-manual-environment-setup"><a href="#option-2-manual-environment-setup" class="headerlink" title="OPTION 2- Manual environment setup"></a>OPTION 2- Manual environment setup</h2><h3 id="prerequisites"><a href="#prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h3><p>Node <code>11.6.0</code></p>
+<h3 id="install-android-sdkmanager"><a href="#install-android-sdkmanager" class="headerlink" title="Install Android sdkmanager"></a>Install Android sdkmanager</h3><p>Instructions for getting the android sdk manager, adb, ndk-bundle, etc:</p>
 <p>To install it on a Debian based system simply do
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Install latest JDK</span></span><br><span class="line">sudo apt install default-jdk</span><br><span class="line"></span><br><span class="line"><span class="comment"># install unzip if not installed yet</span></span><br><span class="line">sudo apt install unzip</span><br><span class="line"></span><br><span class="line"><span class="comment"># get latest sdk tools - link will change. go to https://developer.android.com/studio/#downloads to get the latest one</span></span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip</span><br><span class="line"></span><br><span class="line"><span class="comment"># unpack archive</span></span><br><span class="line">unzip sdk-tools-linux-4333796.zip</span><br><span class="line"></span><br><span class="line">rm sdk-tools-linux-4333796.zip</span><br><span class="line"></span><br><span class="line">mkdir android-sdk</span><br><span class="line">mv tools android-sdk/tools</span><br></pre></td></tr></table></figure></p>
 <p>Then add the Android SDK to your PATH, open ~/.bashrc in editor and add the following lines into the file
@@ -483,7 +483,7 @@
 <p>Now you have adb, fastboot and the latest sdk tools installed</p>
 <p>to install NDK directly run</p>
 <p><code>sdkmanager &quot;ndk-bundle&quot;</code></p>
-<h2 id="build-apk"><a href="#build-apk" class="headerlink" title="Build APK"></a>Build APK</h2><p>Confirm that <code>$ANDROID_HOME</code> points to Android/Sdk directory</p>
+<h3 id="build-apk"><a href="#build-apk" class="headerlink" title="Build APK"></a>Build APK</h3><p>Confirm that <code>$ANDROID_HOME</code> points to Android/Sdk directory</p>
 <p>Make the NDK standalone toolchain
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> exokit</span><br><span class="line">./scripts/make-toolchain-android.sh</span><br></pre></td></tr></table></figure></p>
 <p>Build the APK
@@ -519,7 +519,7 @@
   <ul class="subnav">
     
       <li class="subnav-item">
-        <a class="subnav-link" href="#set-default-site">Set default site</a>
+        <a class="subnav-link" href="#option-1-docker">OPTION 1- Docker</a>
 
         <!-- Nested. -->
         
@@ -530,33 +530,23 @@
       </li>
     
       <li class="subnav-item">
-        <a class="subnav-link" href="#prerequisites">Prerequisites</a>
+        <a class="subnav-link" href="#option-2-manual-environment-setup">OPTION 2- Manual environment setup</a>
 
         <!-- Nested. -->
         
           <ul>
             
-          </ul>
-        
-      </li>
-    
-      <li class="subnav-item">
-        <a class="subnav-link" href="#install-android-sdkmanager">Install Android sdkmanager</a>
-
-        <!-- Nested. -->
-        
-          <ul>
+              <li class="subnav-item">
+                <a class="subnav-link" href="#prerequisites">Prerequisites</a>
+              </li>
             
-          </ul>
-        
-      </li>
-    
-      <li class="subnav-item">
-        <a class="subnav-link" href="#build-apk">Build APK</a>
-
-        <!-- Nested. -->
-        
-          <ul>
+              <li class="subnav-item">
+                <a class="subnav-link" href="#install-android-sdkmanager">Install Android sdkmanager</a>
+              </li>
+            
+              <li class="subnav-item">
+                <a class="subnav-link" href="#build-apk">Build APK</a>
+              </li>
             
           </ul>
         
