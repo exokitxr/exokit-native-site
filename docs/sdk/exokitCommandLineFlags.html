@@ -440,7 +440,7 @@
 <td>Loads realitytabs.html home (default)</td>
 </tr>
 <tr>
-<td><code>-t</code></td>
+<td><code>-t &lt;site url&gt;</code></td>
 <td><code>--tab</code></td>
 <td>Load a URL as a reality Tab</td>
 </tr>
@@ -452,7 +452,7 @@
 <tr>
 <td><code>-x &lt;all, webvr&gt;</code></td>
 <td><code>--xr</code></td>
-<td>By default loads both WebXR and WebVR, <code>-x webvr</code> loads WebVR specifically</td>
+<td>By default uses <code>-x all</code>, which loads both WebXR and WebVR, <code>-x webvr</code> loads WebVR specifically</td>
 </tr>
 <tr>
 <td><code>-p</code></td>
@@ -477,7 +477,7 @@
 <tr>
 <td><code>-q</code></td>
 <td><code>--quit</code></td>
-<td>Quit and exit process</td>
+<td>Quits on load, runs the load phase and quits before render</td>
 </tr>
 <tr>
 <td><code>-l</code></td>
@@ -485,9 +485,9 @@
 <td>Output log to log.txt</td>
 </tr>
 <tr>
-<td><code>-r &lt;file&gt; &lt;file&gt;</code></td>
+<td><code>-r &lt;remote site file&gt; &lt;local file path&gt;</code></td>
 <td><code>--replace</code></td>
-<td>Replace with a local file</td>
+<td>Replace file from site with a local file</td>
 </tr>
 <tr>
 <td><code>-u</code></td>
@@ -500,7 +500,7 @@
 <td>Run Exokit in headless mode</td>
 </tr>
 <tr>
-<td><code>-d</code></td>
+<td><code>-d &lt;site url&gt;</code></td>
 <td><code>--download</code></td>
 <td>Download site to <code>downloads</code> directory</td>
 </tr>

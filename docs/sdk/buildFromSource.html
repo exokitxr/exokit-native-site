@@ -419,11 +419,12 @@
 
       <p>The main project repository is at <a href="https://github.com/exokitxr/exokit" target="_blank" rel="external"><code>exokitxr/exokit</code></a>. You can clone it the regular way:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/exokitxr/exokit.git</span><br></pre></td></tr></table></figure>
-<h2 id="install-and-build"><a href="#install-and-build" class="headerlink" title="Install and build"></a>Install and build</h2><p>All of the Exokit depedencies and native code can be build with <code>npm install</code>:</p>
+<h2 id="install-and-build"><a href="#install-and-build" class="headerlink" title="Install and build"></a>Install and build</h2><p>Make sure to be using Node <code>v11.6.0</code>. We recommend using <a href="https://github.com/nvm-sh/nvm" target="_blank" rel="external">nvm</a> or <a href="https://github.com/coreybutler/nvm-windows" target="_blank" rel="external">nvm-windows</a> for managing Node versions.
+After Node <code>v11.6.0</code> is installed, all of the Exokit dependencies and native code can be build with <code>npm install</code>:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> exokit</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<h3 id="linux-dependencies"><a href="#linux-dependencies" class="headerlink" title="Linux dependencies"></a>Linux dependencies</h3><p>Linux additionally requires that you install some local dependencies. For <code>debian</code>/<code>ubuntu</code> they are:
+<h3 id="linux-dependencies"><a href="#linux-dependencies" class="headerlink" title="Linux dependencies"></a>Linux dependencies</h3><p>Linux additionally requires that you install some local dependencies. For <code>Debian</code>/<code>Ubuntu</code> they are:
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">apt-get install -y \</span><br><span class="line">build-essential wget python libglfw3-dev libglew-dev libfreetype6-dev libfontconfig1-dev uuid-dev libxcursor-dev libxinerama-dev libxi-dev libasound2-dev libexpat1-dev</span><br></pre></td></tr></table></figure></p>
-<h3 id="common-build-errors"><a href="#common-build-errors" class="headerlink" title="Common build errors"></a>Common build errors</h3><p>This section covers common errors when building the Exokit engine and their solutions.</p>
+<h2 id="common-build-errors"><a href="#common-build-errors" class="headerlink" title="Common build errors"></a>Common build errors</h2><p>This section covers common errors when building the Exokit engine and their solutions.</p>
 <h3 id="error-cannot-find-module-39-build-release-vm-one-node-39"><a href="#error-cannot-find-module-39-build-release-vm-one-node-39" class="headerlink" title="Error: Cannot find module &#39;./build/Release/vm_one.node&#39;"></a><code>Error: Cannot find module &#39;./build/Release/vm_one.node&#39;</code></h3><p>There was a build failure that was ignored and <code>node_modules</code> contains the failure. Wipe <code>node_modules</code> and try to build again.</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">rm -rf node_modules</span><br><span class="line">npm cache clean</span><br></pre></td></tr></table></figure>
 <h3 id="lt-skimage-h-gt-not-found-or-a-missing-header"><a href="#lt-skimage-h-gt-not-found-or-a-missing-header" class="headerlink" title="&lt;SkImage.h&gt; not found, or a missing header"></a><code>&lt;SkImage.h&gt; not found</code>, or a missing header</h3><p>This means a prebuilt dependency did not extract. Clear your <code>npm</code>/<code>yarn</code> cache, <code>rm -Rf node_modules</code> and <code>npm install</code> again.</p>
@@ -434,7 +435,7 @@
 <h2 id="run-exokit-engine"><a href="#run-exokit-engine" class="headerlink" title="Run Exokit Engine"></a>Run Exokit Engine</h2><p>Exokit Engine is just a node module, so you can run it with node.
 From the <code>exokit</code> git clone directory, do:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">node . &lt;site URL or file path&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="debugging"><a href="#debugging" class="headerlink" title="Debugging"></a>Debugging</h3><p>You can use the regular Node debugging tools and gdb to debug Exokit Engine. See the <a href="debugging.html">debugging documentation</a> for more information.</p>
+<h2 id="debugging"><a href="#debugging" class="headerlink" title="Debugging"></a>Debugging</h2><p>You can use the regular Node debugging tools and gdb to debug Exokit Engine. See the <a href="debugging.html">debugging documentation</a> for more information.</p>
 <h2 id="contributing"><a href="#contributing" class="headerlink" title="Contributing"></a>Contributing</h2><p>Please <a href="https://github.com/exokitxr/exokit/issues" target="_blank" rel="external">file an issue</a> if you encounter any bugs. Pull Requests are very much welcome as well.</p>
 
 
@@ -472,9 +473,16 @@ From the <code>exokit</code> git clone directory, do:</p>
                 <a class="subnav-link" href="#linux-dependencies">Linux dependencies</a>
               </li>
             
-              <li class="subnav-item">
-                <a class="subnav-link" href="#common-build-errors">Common build errors</a>
-              </li>
+          </ul>
+        
+      </li>
+    
+      <li class="subnav-item">
+        <a class="subnav-link" href="#common-build-errors">Common build errors</a>
+
+        <!-- Nested. -->
+        
+          <ul>
             
               <li class="subnav-item">
                 <a class="subnav-link" href="#error-cannot-find-module-39-build-release-vm-one-node-39">Error: Cannot find module &#39;./build/Release/vm_one.node&#39;</a>
@@ -495,9 +503,16 @@ From the <code>exokit</code> git clone directory, do:</p>
         
           <ul>
             
-              <li class="subnav-item">
-                <a class="subnav-link" href="#debugging">Debugging</a>
-              </li>
+          </ul>
+        
+      </li>
+    
+      <li class="subnav-item">
+        <a class="subnav-link" href="#debugging">Debugging</a>
+
+        <!-- Nested. -->
+        
+          <ul>
             
           </ul>
         

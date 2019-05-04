@@ -420,7 +420,7 @@
       <p>This guide explains how to package your XR site with the Exokit Engine as an EXE for Windows.</p>
 <h2 id="set-default-site"><a href="#set-default-site" class="headerlink" title="Set default site"></a>Set default site</h2><p>In the Exokit <a href="https://github.com/exokitxr/exokit/blob/master/scripts/exokit.sh#L17" target="_blank" rel="external"><code>scripts/exokit.sh</code></a> is where you will find the default site that the Exokit EXE application will load into. Change the argument passed in to your site URL or file path.</p>
 <h2 id="prerequisites"><a href="#prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><p>Latest Exokit</p>
-<h2 id="build-exe"><a href="#build-exe" class="headerlink" title="Build exe"></a>Build exe</h2><p>Install and extract the necessary Node.js version
+<h2 id="build-exe"><a href="#build-exe" class="headerlink" title="Build EXE"></a>Build EXE</h2><p>Install and extract the necessary Node.js version
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">wget <span class="string">"https://nodejs.org/dist/v11.6.0/node-v11.6.0-win-x64.zip"</span> -OutFile node.zip</span><br><span class="line">7z x node.zip</span><br><span class="line">rm node.zip</span><br><span class="line">mv node-v11.6.0-win-x64 node</span><br></pre></td></tr></table></figure></p>
 <p>Export Node.js path and build Exokit module
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="variable">$env</span>:Path = <span class="string">"<span class="variable">$pwd</span>\node;<span class="variable">$env</span>:Path"</span>;</span><br><span class="line">.\node\npm install --no-optional</span><br></pre></td></tr></table></figure></p>
@@ -480,7 +480,7 @@
       </li>
     
       <li class="subnav-item">
-        <a class="subnav-link" href="#build-exe">Build exe</a>
+        <a class="subnav-link" href="#build-exe">Build EXE</a>
 
         <!-- Nested. -->
         

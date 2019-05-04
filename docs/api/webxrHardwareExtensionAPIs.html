@@ -418,8 +418,9 @@
 
 
       <p>This currently consists of seperate device-specific APIs, but will be folded into a more generic API, properly coded in Exokit generically on the session objects rather than under a <code>magicleap</code> namespace.</p>
-<h1 id="magic-leap-one-api"><a href="#magic-leap-one-api" class="headerlink" title="Magic Leap One API"></a>Magic Leap One API</h1><p>The Magic Leap API is exposed to sites under the <code>window.browser.magicleap</code> endpoint. This is inspired by the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API" target="_blank" rel="external">WebExtension API style</a>. It is not a web standard (yet).</p>
-<h2 id="classes"><a href="#classes" class="headerlink" title="Classes"></a>Classes</h2><h3 id="mlmesher"><a href="#mlmesher" class="headerlink" title="MLMesher"></a><code>MLMesher</code></h3><p>Used to acquire meshing updates from the Magic Leap platform.</p>
+<h2 id="magic-leap-one-api"><a href="#magic-leap-one-api" class="headerlink" title="Magic Leap One API"></a>Magic Leap One API</h2><p>The Magic Leap API is exposed to sites under the <code>window.browser.magicleap</code> endpoint. This is inspired by the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API" target="_blank" rel="external">WebExtension API style</a>. It is not a web standard (yet).</p>
+<p><strong>Classes:</strong></p>
+<h3 id="mlmesher"><a href="#mlmesher" class="headerlink" title="MLMesher"></a><code>MLMesher</code></h3><p>Used to acquire meshing updates from the Magic Leap platform.</p>
 <h4 id="mlmesher-onmesh-function-mlmeshupdate"><a href="#mlmesher-onmesh-function-mlmeshupdate" class="headerlink" title="MLMesher.onmesh : function(MLMeshUpdate[])"></a><code>MLMesher.onmesh : function(MLMeshUpdate[])</code></h4><p>When set, <code>onmesh</code> will be called with an array of <code>MLBufferUpdate</code>. This indicates a change to the world mesh state which should be applied to the scene.</p>
 <h3 id="mlmeshupdate"><a href="#mlmeshupdate" class="headerlink" title="MLMeshUpdate"></a><code>MLMeshUpdate</code></h3><p>A single update to the world mesh.</p>
 <h4 id="mlmeshupdate-type-string"><a href="#mlmeshupdate-type-string" class="headerlink" title="MLMeshUpdate.type : String"></a><code>MLMeshUpdate.type : String</code></h4><p>The type of update. Can be either:</p>
@@ -500,7 +501,7 @@
 <p>Do not use this for checking where the eye is looking; that is what <code>fixation</code> is for.</p>
 </blockquote>
 <h3 id="mleye-blink-boolean"><a href="#mleye-blink-boolean" class="headerlink" title="MLEye.blink : Boolean"></a><code>MLEye.blink : Boolean</code></h3><p>Whether this eye is currently closed (<code>true</code>) or open (<code>false</code>).</p>
-<h2 id="endpoints"><a href="#endpoints" class="headerlink" title="Endpoints"></a>Endpoints</h2><h4 id="browser-magicleap-requestmeshing-mlmesher"><a href="#browser-magicleap-requestmeshing-mlmesher" class="headerlink" title="browser.magicleap.RequestMeshing() : MLMesher"></a><code>browser.magicleap.RequestMeshing() : MLMesher</code></h4><p>Returns an instance of <code>MLMesher</code>, which can be used to receive world meshing buffer updates from the Magic Leap platform.</p>
+<h3 id="endpoints"><a href="#endpoints" class="headerlink" title="Endpoints"></a>Endpoints</h3><h4 id="browser-magicleap-requestmeshing-mlmesher"><a href="#browser-magicleap-requestmeshing-mlmesher" class="headerlink" title="browser.magicleap.RequestMeshing() : MLMesher"></a><code>browser.magicleap.RequestMeshing() : MLMesher</code></h4><p>Returns an instance of <code>MLMesher</code>, which can be used to receive world meshing buffer updates from the Magic Leap platform.</p>
 <h4 id="browser-magicleap-requestplanetracking-mlplanetracker"><a href="#browser-magicleap-requestplanetracking-mlplanetracker" class="headerlink" title="browser.magicleap.RequestPlaneTracking() : MLPlaneTracker"></a><code>browser.magicleap.RequestPlaneTracking() : MLPlaneTracker</code></h4><p>Returns an instance of <code>MLPlaneTracker</code>, which can be used to receive world planes detected by the Magic Leap platform.</p>
 <h4 id="browser-magicleap-requesthandtracking-mlhandtracker"><a href="#browser-magicleap-requesthandtracking-mlhandtracker" class="headerlink" title="browser.magicleap.RequestHandTracking() : MLHandTracker"></a><code>browser.magicleap.RequestHandTracking() : MLHandTracker</code></h4><p>Returns an instance of <code>MLHandTracker</code>, which can be used to receive hand tracking data from the Magic Leap platform.</p>
 <h4 id="browser-magicleap-requesteyetracking-mleyetracker"><a href="#browser-magicleap-requesteyetracking-mleyetracker" class="headerlink" title="browser.magicleap.RequestEyeTracking() : MLEyeTracker"></a><code>browser.magicleap.RequestEyeTracking() : MLEyeTracker</code></h4><p>Returns an instance of <code>MLEyeTracker</code>, which can be used to receive eye tracking data from the Magic Leap platform.</p>
@@ -535,7 +536,7 @@
   <ul class="subnav">
     
       <li class="subnav-item">
-        <a class="subnav-link" href="#classes">Classes</a>
+        <a class="subnav-link" href="#magic-leap-one-api">Magic Leap One API</a>
 
         <!-- Nested. -->
         
@@ -593,16 +594,9 @@
                 <a class="subnav-link" href="#mleye-blink-boolean">MLEye.blink : Boolean</a>
               </li>
             
-          </ul>
-        
-      </li>
-    
-      <li class="subnav-item">
-        <a class="subnav-link" href="#endpoints">Endpoints</a>
-
-        <!-- Nested. -->
-        
-          <ul>
+              <li class="subnav-item">
+                <a class="subnav-link" href="#endpoints">Endpoints</a>
+              </li>
             
           </ul>
         
