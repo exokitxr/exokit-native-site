@@ -421,14 +421,16 @@
       <p>This guide explains how to package your XR site with the Exokit Engine as an MPK for the Magic Leap One headset.</p>
 <h2 id="set-default-site"><a href="#set-default-site" class="headerlink" title="Set default site"></a>Set default site</h2><p>In the Exokit <a href="https://github.com/exokitxr/exokit/blob/f10dadf0013de0a35a5e72046140a0345987ab80/main.cpp#L416" target="_blank" rel="external"><code>main.cpp</code></a> is where you will find the default site that the Exokit MPK will load into. Change the <code>jsString</code> to your site URL or file path.</p>
 <h2 id="prerequisites"><a href="#prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><p>Node <code>11.6.0</code>
+XCode
 Latest Exokit</p>
 <h2 id="install-the-magic-leap-sdk"><a href="#install-the-magic-leap-sdk" class="headerlink" title="Install the Magic Leap SDK"></a>Install the Magic Leap SDK</h2><p>Sign in as a Magic Leap creator:
 <a href="https://www.magicleap.com/creator" target="_blank" rel="external">https://www.magicleap.com/creator</a></p>
+<p>Download developer certificate and private key in Publish then Certificates.</p>
 <p>Download the Package Manager:
 <a href="https://creator.magicleap.com/downloads/lumin-sdk/overview" target="_blank" rel="external">https://creator.magicleap.com/downloads/lumin-sdk/overview</a></p>
 <p>Once the package manager is opened, download the 0.19.0 version of the SDK.</p>
-<h2 id="build-mpk"><a href="#build-mpk" class="headerlink" title="Build MPK"></a>Build MPK</h2><p>Confirm that <code>MLSDK</code> in <code>version-ml.sh</code> points to the Magic Leap SDK directory
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> exokit</span><br><span class="line"><span class="comment"># edit MLSDK path in ./scripts/version-ml.sh</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="build-mpk"><a href="#build-mpk" class="headerlink" title="Build MPK"></a>Build MPK</h2><p>Confirm that <code>MLSDK</code> in <code>version-ml.sh</code> points to the Magic Leap SDK directory. Create the <code>cert</code> directory and place the renamed certificate and private key inside.
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> exokit</span><br><span class="line"><span class="comment"># edit MLSDK path in ./scripts/version-ml.sh</span></span><br><span class="line"><span class="comment"># place the renamed certificate in cert/app.cert and private key in cert/app.privkey</span></span><br></pre></td></tr></table></figure></p>
 <p>Build the MPK
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./scripts/build-ml.sh</span><br></pre></td></tr></table></figure></p>
 <p>If you want to now install and run into your plugged in device using mldb
