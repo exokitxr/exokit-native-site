@@ -427,8 +427,7 @@
 <li><code>docker build -f android.Dockerfile -t exokit .</code></li>
 <li><code>docker run exokit cat exokit.apk &gt;exokit.apk</code></li>
 </ul>
-<h2 id="option-2-manual-environment-setup"><a href="#option-2-manual-environment-setup" class="headerlink" title="OPTION 2- Manual environment setup"></a>OPTION 2- Manual environment setup</h2><h3 id="prerequisites"><a href="#prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h3><p>Node <code>11.6.0</code>
-Latest Exokit</p>
+<h2 id="option-2-manual-environment-setup"><a href="#option-2-manual-environment-setup" class="headerlink" title="OPTION 2- Manual environment setup"></a>OPTION 2- Manual environment setup</h2><h3 id="prerequisites"><a href="#prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h3><p>Node <code>11.6.0</code><br>Latest Exokit<br>Ubuntu Windows Subsystem for Linux (WSL)</p>
 <h3 id="install-android-sdkmanager"><a href="#install-android-sdkmanager" class="headerlink" title="Install Android sdkmanager"></a>Install Android sdkmanager</h3><p>Instructions for getting the android sdk manager, adb, ndk-bundle, etc:</p>
 <p>To install it on a Debian based system simply do
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Install latest JDK</span></span><br><span class="line">sudo apt install default-jdk</span><br><span class="line"></span><br><span class="line"><span class="comment"># install unzip if not installed yet</span></span><br><span class="line">sudo apt install unzip</span><br><span class="line"></span><br><span class="line"><span class="comment"># get latest sdk tools - link will change. go to https://developer.android.com/studio/#downloads to get the latest one</span></span><br><span class="line"><span class="built_in">cd</span> ~</span><br><span class="line">wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip</span><br><span class="line"></span><br><span class="line"><span class="comment"># unpack archive</span></span><br><span class="line">unzip sdk-tools-linux-4333796.zip</span><br><span class="line"></span><br><span class="line">rm sdk-tools-linux-4333796.zip</span><br><span class="line"></span><br><span class="line">mkdir android-sdk</span><br><span class="line">mv tools android-sdk/tools</span><br></pre></td></tr></table></figure></p>
@@ -449,7 +448,7 @@ Latest Exokit</p>
 <p>Make the NDK standalone toolchain
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> exokit</span><br><span class="line">./scripts/make-toolchain-android.sh</span><br></pre></td></tr></table></figure></p>
 <p>Build the APK
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./scripts/build-android.sh</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Run this inside Ubuntu WSL</span></span><br><span class="line">./scripts/build-android.sh</span><br></pre></td></tr></table></figure></p>
 <p>If you want to now install and run into your plugged in device using adb
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./scripts/install-android.sh</span><br><span class="line">./scripts/run-android.sh</span><br></pre></td></tr></table></figure></p>
 
