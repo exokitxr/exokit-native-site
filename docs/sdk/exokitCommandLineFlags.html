@@ -433,7 +433,7 @@
 <tr>
 <td><code>-v</code></td>
 <td><code>--version</code></td>
-<td>Version of Exokit Engine</td>
+<td>Print version and exit</td>
 </tr>
 <tr>
 <td><code>-h</code></td>
@@ -443,42 +443,45 @@
 <tr>
 <td><code>-t &lt;site url&gt;</code></td>
 <td><code>--tab</code></td>
-<td>Load a URL as a reality Tab</td>
+<td>Load a URL as a reality tab</td>
 </tr>
 <tr>
 <td><code>-w</code></td>
-<td><code>--webgl</code></td>
-<td>Exposes WebGL, by default Exokit exposes WebGL2</td>
+<td>`–webgl &lt;1</td>
+<td>2&gt;`</td>
+<td>Choose which version of WebGL to expose; defaults to 2</td>
 </tr>
 <tr>
-<td><code>-x &lt;all, webvr&gt;</code></td>
+<td>`-x &lt;all</td>
+<td>webxr</td>
+<td>webvr&gt;`</td>
 <td><code>--xr</code></td>
-<td>By default uses <code>-x all</code>, which loads both WebXR and WebVR, <code>-x webvr</code> loads WebVR specifically</td>
+<td>Choose which version of WebVR/XR to expose; defaults to all</td>
 </tr>
 <tr>
 <td><code>-p</code></td>
 <td><code>--perf</code></td>
-<td>Performance logging to console</td>
+<td>Log frame timing to console</td>
 </tr>
 <tr>
-<td><code>-s &lt;size&gt;</code></td>
+<td><code>-s &lt;WxH&gt;</code></td>
 <td><code>--size</code></td>
-<td>Set window size</td>
+<td>Set window size to W by H</td>
 </tr>
 <tr>
 <td><code>-f</code></td>
 <td><code>--frame</code></td>
-<td>Get GL call list with arguments to console log</td>
+<td>Log GL method calls and arguments to console</td>
 </tr>
 <tr>
 <td><code>-m</code></td>
 <td><code>--minimalFrame</code></td>
-<td>Get GL call list to console log</td>
+<td>Log GL method calls to console</td>
 </tr>
 <tr>
 <td><code>-q</code></td>
 <td><code>--quit</code></td>
-<td>Quits on load, runs the load phase and quits before render</td>
+<td>Quit on load; run the load phase and exit</td>
 </tr>
 <tr>
 <td><code>-l</code></td>
@@ -493,17 +496,22 @@
 <tr>
 <td><code>-u</code></td>
 <td><code>--require</code></td>
-<td>Require native modules</td>
+<td>Expose node require() on <code>window</code></td>
 </tr>
 <tr>
 <td><code>-n</code></td>
-<td><code>--headless</code></td>
-<td>Run Exokit in headless mode</td>
+<td><code>--nogl</code></td>
+<td>Do not create GL contexts</td>
 </tr>
 <tr>
-<td><code>-d &lt;site url&gt;</code></td>
+<td><code>-e</code></td>
+<td><code>--headless</code></td>
+<td>Run in headless mode; do not create OS windows</td>
+</tr>
+<tr>
+<td><code>-d &lt;downloadDirectory&gt;</code></td>
 <td><code>--download</code></td>
-<td>Download site to <code>downloads</code> directory</td>
+<td>Download site to <code>downloadDirectory</code></td>
 </tr>
 </tbody>
 </table>
