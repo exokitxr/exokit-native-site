@@ -420,7 +420,7 @@
 
       <p>This guide explains how to package your XR site with the Exokit Engine as an DMG application for macOS.</p>
 <h2 id="set-default-site"><a href="#set-default-site" class="headerlink" title="Set default site"></a>Set default site</h2><p>In the Exokit <a href="https://github.com/exokitxr/exokit/blob/master/scripts/exokit-macos#L17" target="_blank" rel="external"><code>scripts/exokit-macos</code></a> is where you will find the default site that the Exokit DMG application will load into. Change the argument passed in to your site URL or file path.</p>
-<h2 id="prerequisites"><a href="#prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><p>Node <code>11.6.0</code>
+<h2 id="prerequisites"><a href="#prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><p>Node <code>12.2.0</code>
 XCode
 Latest Exokit</p>
 <h2 id="build-dmg"><a href="#build-dmg" class="headerlink" title="Build DMG"></a>Build DMG</h2><p>Navigate to the Exokit directory
@@ -428,7 +428,7 @@ Latest Exokit</p>
 <p>Install <a href="https://github.com/LinusU/node-appdmg" target="_blank" rel="external">appdmg</a>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -g appdmg</span><br></pre></td></tr></table></figure></p>
 <p>Install and extract the necessary Node.js version
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">curl <span class="string">"https://nodejs.org/dist/v11.6.0/node-v11.6.0-darwin-x64.tar.gz"</span> &gt;node.tar.gz</span><br><span class="line">tar -zxf node.tar.gz</span><br><span class="line">rm node.tar.gz</span><br><span class="line">mv node-v11.6.0-darwin-x64 node</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">curl <span class="string">"https://nodejs.org/dist/v12.2.0/node-v12.2.0-darwin-x64.tar.gz"</span> &gt;node.tar.gz</span><br><span class="line">tar -zxf node.tar.gz</span><br><span class="line">rm node.tar.gz</span><br><span class="line">mv node-v12.2.0-darwin-x64 node</span><br></pre></td></tr></table></figure></p>
 <p>Export Node.js path and build Exokit module
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$(pwd)</span>/node/bin:<span class="variable">$PATH</span>"</span></span><br><span class="line"><span class="built_in">unset</span> NVM_NODEJS_ORG_MIRROR</span><br><span class="line"><span class="string">"./node/bin/npm install --no-optional"</span></span><br><span class="line">install_name_tool -change <span class="string">'@rpath/OpenVR.framework/Versions/A/OpenVR'</span> <span class="string">'@loader_path/../../node_modules/native-openvr-deps/bin/osx64/OpenVR.framework/Versions/A/OpenVR'</span> build/Release/exokit.node</span><br></pre></td></tr></table></figure></p>
 <p>Copy all Exokit files to a temp directory
