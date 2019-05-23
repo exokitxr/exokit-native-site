@@ -446,11 +446,11 @@
 <p><code>sdkmanager &quot;ndk-bundle&quot;</code></p>
 <h3 id="build-apk"><a href="#build-apk" class="headerlink" title="Build APK"></a>Build APK</h3><p>Confirm that <code>$ANDROID_HOME</code> points to Android/Sdk directory</p>
 <p>Make the NDK standalone toolchain:
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> exokit</span><br><span class="line">./scripts/make-toolchain-android.sh</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> exokit</span><br><span class="line">./scripts/oculusmobile/make-toolchain-android.sh</span><br></pre></td></tr></table></figure></p>
 <p>Build the APK:
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Run this inside Ubuntu WSL</span></span><br><span class="line">./scripts/build-android.sh</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Run this inside Ubuntu WSL</span></span><br><span class="line">./scripts/oculusmobile/build-android.sh</span><br></pre></td></tr></table></figure></p>
 <p>If you want to now install and run in your plugged-in device using adb:
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./scripts/install-android.sh</span><br><span class="line">./scripts/run-android.sh</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./scripts/oculusmobile/install-android.sh</span><br><span class="line">./scripts/oculusmobile/run-android.sh</span><br></pre></td></tr></table></figure></p>
 
 
       <!-- Previous / Next navigation. -->
